@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode">
+
+    <!-- Top of the page -->
+    <header id="top">
+        <h1>Web Development</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tutorials">Tutorials</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#get-started">Get Started</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <button class="toggle-btn" onclick="toggleDarkMode()" id="modeToggleBtn">
+        <i id="modeIcon">🌙</i> <!-- Only the moon and sun emojis -->
+    </button>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Web Development!</h2>
+        <p>Your one-stop place for everything about web development. Whether you're a beginner or an expert, we’ve got you covered!</p>
+        <div class="button-container">
+            <a href="#tutorials" class="button">Explore Tutorials</a>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section id="tutorials">
+        <h2>📚 Tutorials</h2>
+        <p>Learn HTML, CSS, JavaScript, and more with these tutorials.</p>
+        <div class="button-container">
+            <a href="https://youtu.be/yfoY53QXEnI?si=B2CqOAYG4w-7S4cR" class="button" target="_blank">HTML Tutorial</a>
+            <a href="https://www.youtube.com/watch?v=yfoY53QXEnI" class="button" target="_blank">CSS Tutorial</a>
+            <a href="https://www.youtube.com/watch?v=hdI2bqOjy3c" class="button" target="_blank">JavaScript Tutorial</a>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+        <h2>🏆 Awards</h2>
+        <p>HTML has been recognized for excellence in web development.</p>
+        <span class="award-badge">Best Webdevelop launguage 2025</span>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="get-started">
+        <h2>⚙️ Get Started</h2>
+        <p>Here's a roadmap to start building websites!</p>
+        <ul class="steps">
+            <li>Step 1: Learn HTML</li>
+            <li>Step 2: Master CSS</li>
+            <li>Step 3: Dive into JavaScript</li>
+            <li>Step 4: Practice with Projects</li>
+        </ul>
+        <div>
+            <!-- Updated link to scroll directly to the top -->
+            <a href="#top" class="button">Start with Tutorials</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h3>📧 Contact Me</h3>
+        <p>Have Questions? Or Want To Collaborate, Feel Free To Reach Out To Me At This Email..</p>
+        <a href="mailto:tasosprogramming@gmail.com" class="button">Email Me</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Web Developed By Tasos Lazaridis | All Rights Reserved</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

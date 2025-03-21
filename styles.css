@@ -1,0 +1,245 @@
+/* General reset and body styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 20px;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #B0B0B0;
+}
+
+body.light-mode {
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    color: #4A90E2;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #4A90E2;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #357ABD;
+}
+
+/* Underline effect */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: white;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    border: 2px solid transparent;
+    width: 100%;
+}
+
+body.dark-mode section {
+    background-color: #1f1f1f;
+    border-color: #333;
+}
+
+body.light-mode section {
+    background-color: #ffffff;
+    border-color: #4A90E2;
+}
+
+/* Button Styles */
+.button {
+    padding: 12px 24px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 200px; /* Set consistent width for buttons */
+}
+
+.button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+/* Award Badge Styles */
+.award-badge {
+    font-size: 18px;
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4A90E2;
+    color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Toggle Button Styles */
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s;
+}
+
+.toggle-btn i {
+    color: white;
+}
+
+.dark-mode .toggle-btn i {
+    color: yellow;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    section {
+        padding: 30px 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .button {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .toggle-btn {
+        font-size: 22px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Steps List Styles */
+.steps {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.steps li {
+    font-size: 18px;
+    padding: 20px;
+    background-color: #4A90E2;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 200px; /* Ensures equal sizing */
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.steps li:hover {
+    transform: scale(1.05);
+    background-color: #357ABD;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .steps li {
+        width: auto;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
