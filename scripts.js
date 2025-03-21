@@ -1,34 +1,35 @@
-// Toggle Dark/Light mode
+// Dark mode toggle functionality
 function toggleDarkMode() {
     const body = document.body;
     const modeIcon = document.getElementById('modeIcon');
     body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
-
-    // Change the icon depending on mode
+    
+    // Toggle between moon and sun icon
     if (body.classList.contains('dark-mode')) {
-        modeIcon.textContent = '🌙';  // Moon icon
+        modeIcon.textContent = '🌙'; // Moon icon for dark mode
     } else {
-        modeIcon.textContent = '🌞';  // Sun icon
+        modeIcon.textContent = '🌞'; // Sun icon for light mode
     }
 }
 
-// Remember the user's theme preference (dark or light mode)
-window.onload = function () {
-    if (localStorage.getItem("mode") === "dark") {
-        document.body.classList.add("dark-mode");
-        document.getElementById("modeIcon").textContent = "🌙";
+// Update the button link dynamically based on screen size
+window.addEventListener('resize', function () {
+    const startTutorialsButton = document.getElementById('startTutorialsButton');
+    
+    if (window.innerWidth <= 767) {
+        startTutorialsButton.setAttribute('href', '#tutorials');
     } else {
-        document.body.classList.add("light-mode");
-        document.getElementById("modeIcon").textContent = "🌞";
+        startTutorialsButton.setAttribute('href', '#top');
     }
-};
+});
 
-// Update the local storage whenever the mode changes
-document.getElementById('modeToggleBtn').addEventListener('click', () => {
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem("mode", "dark");
+// Initialize the button behavior on load
+window.addEventListener('load', function () {
+    const startTutorialsButton = document.getElementById('startTutorialsButton');
+    
+    if (window.innerWidth <= 767) {
+        startTutorialsButton.setAttribute('href', '#tutorials');
     } else {
-        localStorage.setItem("mode", "light");
+        startTutorialsButton.setAttribute('href', '#top');
     }
 });
